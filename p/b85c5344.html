@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>基于Hexo+Github Pages搭建一个属于自己的博客网站 | LAIHSIAO</title><meta name="keywords" content="博客,Hexo,教程,建站,GitHub"><meta name="author" content="Laihsiao"><meta name="copyright" content="Laihsiao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="准备工作进入Github官网注册并登录：  若你已经拥有GitHub账号，可跳过这一步。 安装Node.jsNode.js为博客运行环境之一，搭建博客的主要操作在Node.js和Git的环境下完成。 安装8.10以上版本的Node.js，推荐安装10.0及以上版本。 你可前往Node.js官网进行安装：   但此方法下载速度极慢，建议前往淘宝镜像站进行下载。 安装Git下载安装Git：     下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于Hexo+Github Pages搭建一个属于自己的博客网站">
+<meta property="og:url" content="http://jilins.top/p/b85c5344.html">
+<meta property="og:site_name" content="LAIHSIAO">
+<meta property="og:description" content="准备工作进入Github官网注册并登录：  若你已经拥有GitHub账号，可跳过这一步。 安装Node.jsNode.js为博客运行环境之一，搭建博客的主要操作在Node.js和Git的环境下完成。 安装8.10以上版本的Node.js，推荐安装10.0及以上版本。 你可前往Node.js官网进行安装：   但此方法下载速度极慢，建议前往淘宝镜像站进行下载。 安装Git下载安装Git：     下">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/28/DyypyF.png">
+<meta property="article:published_time" content="2020-11-28T07:15:22.000Z">
+<meta property="article:modified_time" content="2021-10-15T10:01:38.631Z">
+<meta property="article:author" content="Laihsiao">
+<meta property="article:tag" content="博客">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="建站">
+<meta property="article:tag" content="GitHub">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.ax1x.com/2020/11/28/DyypyF.png"><link rel="shortcut icon" href="/img/favcion.png"><link rel="canonical" href="http://jilins.top/p/b85c5344"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-10-15 18:01:38'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.css"/><link rel="stylesheet" href="/css/Lete.css"><link rel="stylesheet" href="/css/mobile.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_2862676_2zarlebfj1k.css"><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://travellings.now.sh"><i class="fa-fw fa fa-paper-plane"></i><span> 开往</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-puzzle-piece"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-music"></i><span> 书籍</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 影视</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于本站</span></a></li><li><a class="site-page" href="https://jilins.top/p/5a717bf0.html"><i class="fa-fw fa fa-info-circle"></i><span> 更新日志</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-caret-square-down"></i><span> 更多</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://console.leancloud.cn/apps"><i class="fa-fw fas fa-dice-d20"></i><span> LeanCloud</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://imgtu.com/"><i class="fa-fw fas fa-images"></i><span> Imgtu</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LAIHSIAO</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://travellings.now.sh"><i class="fa-fw fa fa-paper-plane"></i><span> 开往</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-puzzle-piece"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-music"></i><span> 书籍</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 影视</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于本站</span></a></li><li><a class="site-page" href="https://jilins.top/p/5a717bf0.html"><i class="fa-fw fa fa-info-circle"></i><span> 更新日志</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-caret-square-down"></i><span> 更多</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://console.leancloud.cn/apps"><i class="fa-fw fas fa-dice-d20"></i><span> LeanCloud</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://imgtu.com/"><i class="fa-fw fas fa-images"></i><span> Imgtu</span></a></li></ul></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">基于Hexo+Github Pages搭建一个属于自己的博客网站</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-28T07:15:22.000Z" title="发表于 2020-11-28 15:15:22">2020-11-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-10-15T10:01:38.631Z" title="更新于 2021-10-15 18:01:38">2021-10-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/p/b85c5344.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/p/b85c5344.html" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="进入Github官网注册并登录："><a href="#进入Github官网注册并登录：" class="headerlink" title="进入Github官网注册并登录："></a>进入<a target="_blank" rel="noopener" href="https://github.com/">Github</a>官网注册并登录：</h2><img src="https://s3.ax1x.com/2020/11/28/DytUpj.png" alt="DytUpj.png" style="zoom: 50%;" />
+
+<p>若你已经拥有GitHub账号，可跳过这一步。</p>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>Node.js为博客运行环境之一，搭建博客的主要操作在Node.js和Git的环境下完成。</p>
+<p>安装8.10以上版本的Node.js，推荐安装10.0及以上版本。</p>
+<p>你可前往Node.js官网进行安装：</p>
+<img src="https://s3.ax1x.com/2020/11/28/DyUwwV.png" alt="DyUwwV.png" style="zoom:67%;" />
+
+<p>但此方法下载速度极慢，建议前往<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/node">淘宝镜像站</a>进行下载。</p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>下载安装Git：</p>
+<img src="https://s3.ax1x.com/2020/11/28/DyaXv9.png" alt="DyaXv9.png" style="zoom: 67%;" />
+
+
+
+<p>下载完成后按Win+R键，输入cmd打开命令行，并分别输入<code>node -v</code>和<code>npm -v</code>回车，出现版本号说明环境已经搭建完成：</p>
+<p><img src="https://s3.ax1x.com/2020/11/28/DywdeI.png" alt="DywdeI.png"></p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在任意空白处鼠标右键，单击Git Base Here，在Git控制台中输入以下代码：</p>
+<blockquote>
+<p>ps：Git控制台中，只有开头出现$符号时才能够输入命令，但此符号不可手动输入</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>提示完成后，Hexo成功安装。安装后亦可通过使用<code>hexo -v</code>查看版本号，若出现版本号，说明Hexo安装完成！</p>
+<h1 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h1><p>新建一个文件夹，你的博客将保存于此文件夹。</p>
+<p>在此文件夹内再次打开Git Bash，输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>进行博客初始化，程序将会克隆一个Hexo项目到你当前文件目录，此过程持续的时间可能较长，请耐心等待。</p>
+<p>当提示<code>INFO  Start blogging with Hexo!</code>时说明博客初始化完成。</p>
+<p>此时你的博客文件夹内主要文件目录应当如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">├── node_modules   &#x2F;&#x2F;依赖包</span><br><span class="line">├── _config.yml    &#x2F;&#x2F;博客的配置文件</span><br><span class="line">├── package.json   </span><br><span class="line">├── scaffolds	   &#x2F;&#x2F;生成文章的一些模板</span><br><span class="line">├── source			</span><br><span class="line">|   └── _posts	   &#x2F;&#x2F;存放文章</span><br><span class="line">└── themes		   &#x2F;&#x2F;主题文件夹</span><br></pre></td></tr></table></figure>
+
+<p>文件目录确认无误后，即可输入<code> hexo generate</code> 生成静态网页，然后输入<code> hexo server</code>打开本地服务器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate    &#x2F;&#x2F;generate可简写为g</span><br><span class="line">hexo server        &#x2F;&#x2F;server可简写为s</span><br></pre></td></tr></table></figure>
+
+<p>稍等片刻后，打开浏览器输入<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> ,就可以看到我们刚刚搭好的博客了！</p>
+<p><img src="https://s3.ax1x.com/2020/11/29/Dc3caF.md.png" alt="Dc3caF.md.png"></p>
+<p>当然这还只是一个雏形，我们可以对博客进行适当的美化，这里后面会提到。</p>
+<h1 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h1><p>打开Github官网，登录你已经注册好的账号，点击右上角的+号，选中New repository(新建仓库)，仓库名一定要命名为<code>xxxx.github.io</code>，xxxx是你的用户名。如我的用户名为JayLinton，则仓库名为jaylinton.github.io。这样Github Pages才能正确识别。</p>
+<p>其他选项参照下图：</p>
+<img src="https://s3.ax1x.com/2020/11/29/Dc8Ysx.png" alt="Dc8Ysx.png" style="zoom: 67%;" />
+
+<p>完成后点击Create repository即可创建仓库。</p>
+<h1 id="生成SSH添加到GitHub"><a href="#生成SSH添加到GitHub" class="headerlink" title="生成SSH添加到GitHub"></a>生成SSH添加到GitHub</h1><p>首先右键打开Git Bash，分别输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;这里输入你的用户名&quot;</span><br><span class="line"></span><br><span class="line">git config --global user.email &quot;这里输入你注册用的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>接下来创建密钥SSH key：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+
+<p>一路回车之后，他会告诉你已经生成了.ssh的文件夹，输入<code>cat ~/.ssh/id_rsa.pub</code>可以得到ssh具体内容。</p>
+<p>打开Github，点击头像选中Setting，选择SSH and GPG keys，先建一个SSH，将<code>id_rsa.pub</code> 内容复制进去，在Git Bash中输入<code>ssh -T git@github.com</code> ，若出现你的用户名，那么恭喜连接成功。</p>
+<h1 id="部署Hexo"><a href="#部署Hexo" class="headerlink" title="部署Hexo"></a>部署Hexo</h1><p>打开博客根目录下的<code>_config.yml</code>文件，这是博客的配置文件，在这里你可以修改与博客配置相关的各种信息。</p>
+<p>修改最后一行的配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">	type: git  </span><br><span class="line">	&#x2F;&#x2F;repository输入你的仓库地址，记得最后加上.git</span><br><span class="line">	repository: https:&#x2F;&#x2F;github.com&#x2F;JayLinton&#x2F;jaylinton.github.io.git  </span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+
+<p>保存后回到博客根目录，打开Git Bash，输入<code>npm i hexo-deployer-git</code> 安装一键发布插件。此时输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo deploy    &#x2F;&#x2F;deploy可简写为d</span><br></pre></td></tr></table></figure>
+
+<p>片刻后，部署完成，此时在浏览器中输入<a target="_blank" rel="noopener" href="https://jaylinton.github.io/">https://jaylinton.github.io/</a> (jaylinton改为你自己的用户名)即可打开已经部署的博客！</p>
+<h1 id="写文章与发布文章"><a href="#写文章与发布文章" class="headerlink" title="写文章与发布文章"></a>写文章与发布文章</h1><p>在博客根目录下打开Git Bash，输入<code>hexo new post “文章名” </code>新建文章。</p>
+<p>打开<code>source/_posts</code>目录可以找到一个你命名的.md文件，你可以用Markdown编辑器如Typora打开它进行创作，完成后重新生成静态网页并发布即可在新生成的博客找到你的新文章。</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>由于Github的服务器部署在国外，大陆用户访问速度是非常感人的，你可以使用<a target="_blank" rel="noopener" href="https://vercel.com/login?next=/dashboard">Vercel</a>进行镜像加速，也可以使用<a target="_blank" rel="noopener" href="https://gitee.com/">Gitee Pages</a>或者<a target="_blank" rel="noopener" href="https://coding.net/">Coding</a>来部署你的博客，速度会更快一些，三家托管网站大同小异，操作类似，这里不再赘述。值得一提的是，Gitee虽然服务器部署在国内，但是是不支持自定义域名的，如果不介意这一点，极度推荐使用。</p>
+<p>另外，原始的Hexo博客是相当简陋的，你可以前往<a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo官网</a>寻找合适的网站进行配置，如本站使用的主题是Jerry大佬的<a target="_blank" rel="noopener" href="https://butterfly.js.org/">Butterfy主题</a>。</p>
+<p>其他未尽事宜改日详述，如有如有问题欢迎在评论区留言或者直接联系我。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Laihsiao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://jilins.top/p/b85c5344.html">http://jilins.top/p/b85c5344.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://jilins.top" target="_blank">LAIHSIAO</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a><a class="post-meta__tags" href="/tags/Hexo/">Hexo</a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><a class="post-meta__tags" href="/tags/%E5%BB%BA%E7%AB%99/">建站</a><a class="post-meta__tags" href="/tags/GitHub/">GitHub</a></div><div class="post_share"><div class="social-share" data-image="https://s3.ax1x.com/2020/11/28/DyypyF.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/9324a42d.html"><img class="prev-cover" src="https://s3.ax1x.com/2020/12/02/D5G3jO.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">马克思1844年经济学哲学手稿读后感</div></div></a></div><div class="next-post pull-right"><a href="/p/5a717bf0.html"><img class="next-cover" src="https://s3.ax1x.com/2020/11/28/DyrYNt.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">更新日志</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Laihsiao</div><div class="author-info__description">来萧的博客</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JayLinton"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/JayLinton" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://qm.qq.com/cgi-bin/qm/qr?k=G8ZD7Rx1q4dPzcoM32nst6hxDJaPhdM9&amp;noverify=0" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://weibo.com/3759294544/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">本站时隔近一年，秽土转生-v1.4.0</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5Github%E5%AE%98%E7%BD%91%E6%B3%A8%E5%86%8C%E5%B9%B6%E7%99%BB%E5%BD%95%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">进入Github官网注册并登录：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Node-js"><span class="toc-number">1.2.</span> <span class="toc-text">安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Git"><span class="toc-number">1.3.</span> <span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="toc-number">1.4.</span> <span class="toc-text">安装Hexo</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2"><span class="toc-number">2.</span> <span class="toc-text">搭建博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAGitHub%E4%BB%93%E5%BA%93"><span class="toc-number">3.</span> <span class="toc-text">创建GitHub仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%9F%E6%88%90SSH%E6%B7%BB%E5%8A%A0%E5%88%B0GitHub"><span class="toc-number">4.</span> <span class="toc-text">生成SSH添加到GitHub</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2Hexo"><span class="toc-number">5.</span> <span class="toc-text">部署Hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%99%E6%96%87%E7%AB%A0%E4%B8%8E%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0"><span class="toc-number">6.</span> <span class="toc-text">写文章与发布文章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">7.</span> <span class="toc-text">其他</span></a></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/2511a216.html" title="Hexo常见问题及其解决方法"><img src="https://gitee.com/jilins/images/raw/master/blogs/hcw.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo常见问题及其解决方法"/></a><div class="content"><a class="title" href="/p/2511a216.html" title="Hexo常见问题及其解决方法">Hexo常见问题及其解决方法</a><time datetime="2021-10-15T04:25:10.000Z" title="发表于 2021-10-15 12:25:10">2021-10-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/e6c54609.html" title="简单往事 Part.1"><img src="https://z3.ax1x.com/2021/10/13/5K6FKS.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="简单往事 Part.1"/></a><div class="content"><a class="title" href="/p/e6c54609.html" title="简单往事 Part.1">简单往事 Part.1</a><time datetime="2021-10-13T07:44:55.000Z" title="发表于 2021-10-13 15:44:55">2021-10-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/9324a42d.html" title="马克思1844年经济学哲学手稿读后感"><img src="https://s3.ax1x.com/2020/12/02/D5G3jO.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="马克思1844年经济学哲学手稿读后感"/></a><div class="content"><a class="title" href="/p/9324a42d.html" title="马克思1844年经济学哲学手稿读后感">马克思1844年经济学哲学手稿读后感</a><time datetime="2020-12-01T11:47:43.000Z" title="发表于 2020-12-01 19:47:43">2020-12-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/b85c5344.html" title="基于Hexo+Github Pages搭建一个属于自己的博客网站"><img src="https://s3.ax1x.com/2020/11/28/DyypyF.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于Hexo+Github Pages搭建一个属于自己的博客网站"/></a><div class="content"><a class="title" href="/p/b85c5344.html" title="基于Hexo+Github Pages搭建一个属于自己的博客网站">基于Hexo+Github Pages搭建一个属于自己的博客网站</a><time datetime="2020-11-28T07:15:22.000Z" title="发表于 2020-11-28 15:15:22">2020-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/5a717bf0.html" title="更新日志"><img src="https://s3.ax1x.com/2020/11/28/DyrYNt.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="更新日志"/></a><div class="content"><a class="title" href="/p/5a717bf0.html" title="更新日志">更新日志</a><time datetime="2020-11-27T10:16:56.000Z" title="发表于 2020-11-27 18:16:56">2020-11-27</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Laihsiao</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20201123" target="_blank"> 20201123号</a></div><div class="icp"><a target="_blank" rel="noopener" href="https://travellings.now.sh/"><img class="icp-icon" src="https://s3.ax1x.com/2020/11/29/DgEbY6.jpg" alt="ICP"/><span></span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: 'IElKll5aRj2Snn4aAxmhSvfS-gzGzoHsz',
+      appKey: 'vKLXkrn7x8qlDdeOgB7RBJvM',
+      placeholder: '记得留下你的昵称和邮箱，可以快速收到回复',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: true,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/js/background.js"></script><script src="/js/mobile.js"></script></div><!-- hexo injector body_end start --><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+                        function gitcalendar_injector_config(){
+                          var parent_div_git = document.getElementById('recent-posts');
+                          var item_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+                          parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+                          console.log('已挂载gitcalendar')
+                          }
+
+                        if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+                            gitcalendar_injector_config()
+                            GitCalendarInit("https://gitcalendar.akilar.top/api?JayLinton",['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'],'JayLinton')
+                        }
+                      </script><!-- hexo injector body_end end --></body></html>

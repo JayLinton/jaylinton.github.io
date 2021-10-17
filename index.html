@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LAIHSIAO - 琴瑟在御</title><meta name="author" content="Laihsiao"><meta name="copyright" content="Laihsiao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="来萧的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LAIHSIAO">
+<meta property="og:url" content="http://jilins.top/index.html">
+<meta property="og:site_name" content="LAIHSIAO">
+<meta property="og:description" content="来萧的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://jilins.top/img/avatar.jpg">
+<meta property="article:author" content="Laihsiao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://jilins.top/img/avatar.jpg"><link rel="shortcut icon" href="/img/favcion.png"><link rel="canonical" href="http://jilins.top/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-10-17 18:08:30'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.css"/><link rel="stylesheet" href="/css/Lete.css"><link rel="stylesheet" href="/css/mobile.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_2862676_2zarlebfj1k.css"><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://travellings.now.sh"><i class="fa-fw fa fa-paper-plane"></i><span> 开往</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-puzzle-piece"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-music"></i><span> 书籍</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 影视</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于本站</span></a></li><li><a class="site-page" href="https://jilins.top/p/5a717bf0.html"><i class="fa-fw fa fa-info-circle"></i><span> 更新日志</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-caret-square-down"></i><span> 更多</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://console.leancloud.cn/apps"><i class="fa-fw fas fa-dice-d20"></i><span> LeanCloud</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://imgtu.com/"><i class="fa-fw fas fa-images"></i><span> Imgtu</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/index_img.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LAIHSIAO</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://travellings.now.sh"><i class="fa-fw fa fa-paper-plane"></i><span> 开往</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-puzzle-piece"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-music"></i><span> 书籍</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 影视</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于本站</span></a></li><li><a class="site-page" href="https://jilins.top/p/5a717bf0.html"><i class="fa-fw fa fa-info-circle"></i><span> 更新日志</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-caret-square-down"></i><span> 更多</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://console.leancloud.cn/apps"><i class="fa-fw fas fa-dice-d20"></i><span> LeanCloud</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://imgtu.com/"><i class="fa-fw fas fa-images"></i><span> Imgtu</span></a></li></ul></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">LAIHSIAO</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/JayLinton" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://qm.qq.com/cgi-bin/qm/qr?k=G8ZD7Rx1q4dPzcoM32nst6hxDJaPhdM9&amp;noverify=0" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://weibo.com/3759294544/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/p/2511a216.html" title="Hexo常见问题及其解决方法">     <img class="post_bg" src="https://gitee.com/jilins/images/raw/master/blogs/hcw.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo常见问题及其解决方法"></a></div><div class="recent-post-info"><a class="article-title" href="/p/2511a216.html" title="Hexo常见问题及其解决方法">Hexo常见问题及其解决方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-15T04:25:10.000Z" title="发表于 2021-10-15 12:25:10">2021-10-15</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%9D%82%E8%B0%88/">杂谈</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Hexo/">Hexo</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="content">
+
+包括我在内的新手小白们在使用Hexo这个极为便捷的博客工具时总是会遇到各种各样的问题，这些问题解决不了就会让人特别头疼。所以我想将这些遇到的问题记录下来，一方面可以让自己遇到问题的时候轻松解决，另一方面还可方便他人。
+bash: hexo: command not found此问题一般出现在上传git的时候，会报错bash: hexo: command not found。这时我们先来看一下是不是Nodejs和Git是否出现了问题 ，依次输入命令node -v和npm -v查看版本信息：
+
+
+出现了上图版本信息就证明 Nodejs 和 npm 是没有问题的，那么可能就应该是环境变量的配置问题了。
+右键【此电脑】，点击【属性】，依次选择【高级系统设置】-【环境变量】，选择系统变量 Path，将 node_modules 下的 .bin 文件路径即[Blogroot]\node_modules\.bin添加到 Path 里面：
+
+[Blogroot]即博客根目录
+
+
+
+
+
+
+值得注意的是，你的博客目录下应该有两个 node_modules 文件夹，分别是[Blogroot]\node_ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/p/e6c54609.html" title="简单往事 Part.1">     <img class="post_bg" src="https://z3.ax1x.com/2021/10/13/5K6FKS.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="简单往事 Part.1"></a></div><div class="recent-post-info"><a class="article-title" href="/p/e6c54609.html" title="简单往事 Part.1">简单往事 Part.1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-13T07:44:55.000Z" title="发表于 2021-10-13 15:44:55">2021-10-13</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%B0%8F%E8%AF%B4/">小说</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%81%8B%E7%88%B1/">恋爱</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a></span></div><div class="content">
+序Prologue突然很想写一下自己上中学的故事，但是仔细回想一下，好像都是些零零碎碎、很无聊又很平淡的事情，根本不值一提。但又转念一想，也许这些零碎而又真诚的故事才正是大多数人的青春吧。艺术往往源于生活又高于生活，所有的故事都是经过加工的事实，所以我决定将它们写下来。
+
+Chapter 1第一次认识陈亦敏是在初二的时候，准确点说是我单方面认识她。
+那年的12班是个很传奇的班级，学校最出名的几个美女都在他们班。陈亦敏刚好是他们中的一个，不过是姿色最差的那个。在我看来，陈亦敏的成绩在年级里名列前茅才是她能够赫然在列的原因。毕竟教学楼里经常挂着年级前百的照片，而陈亦敏的照片意外的拍得很好看。
+不过这些都和我没什么关系才对。
+我一直都是个挺孤僻自闭的人，但我的孤僻往往不会表现出来。我会伪装成一个正常人，正常上课，正常交朋友，正常和同学打闹。我和正常人的区别可能就是，我觉得这些事情真的好无聊。
+不知是中二病发作还是怎样，我那时最喜欢的事情，竟是写些超级无聊的文字。
+我写过很多东西，什么类型的都写过，那种摊开一页纸就能唰唰唰行云流水得写下大几千字的能力，如今早已无影无踪了。最初只是一个人自娱自 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/p/9324a42d.html" title="马克思1844年经济学哲学手稿读后感">     <img class="post_bg" src="https://s3.ax1x.com/2020/12/02/D5G3jO.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="马克思1844年经济学哲学手稿读后感"></a></div><div class="recent-post-info"><a class="article-title" href="/p/9324a42d.html" title="马克思1844年经济学哲学手稿读后感">马克思1844年经济学哲学手稿读后感</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-01T11:47:43.000Z" title="发表于 2020-12-01 19:47:43">2020-12-01</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%9D%82%E8%B0%88/">杂谈</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%BB%8F%E6%B5%8E/">经济</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="content">马克思1844年经济学哲学手稿读后感大二马原课作业
+最近选了《1844年经济学哲学手稿》这本书来读，闲来无事写一下感受。在以前从未关注过相关的东西，别说思考了。也很少思考过资本家与工人之间的矛盾有多么的不可调和，读这本书对社会有了更全面的认识。马克思在第一手稿论述了资本家和工人之间的关系，给我留下了深刻的印象。
+马克思认为工资决定了劳动者和资本家之间是敌对的关系，而此前我一直认为两者是互利的关系；此外，由于工资是由对工人的需求来定的，所以劳动者就变成了一种商品，而工资就是其价格，而且被维持在“工人及其养家糊口所能得到的最低的必要的起码的生活费用，只能维持与畜类一样的生活。”真是令人震撼！
+另一方面，马克思还对亚当斯密进行了批判。亚当斯密认为工人的工资只有在社会财富衰落的情况下才会下降；而马克思认为这是毫无根据的，他说工人在财富处于衰落状态受到的痛苦最大，因为对工人的需求下降，工人将面临失业；在社会财富增进时，虽然对工人需求增加，但因为扩大生产而会导致工人的过度疲劳和早死；到社会财富达到顶点时，工人的贫困状况不变。而且资本家可以较久的没有工人生活，反过来工人却不能活得那么长久。因此工人也 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/p/b85c5344.html" title="基于Hexo+Github Pages搭建一个属于自己的博客网站">     <img class="post_bg" src="https://s3.ax1x.com/2020/11/28/DyypyF.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于Hexo+Github Pages搭建一个属于自己的博客网站"></a></div><div class="recent-post-info"><a class="article-title" href="/p/b85c5344.html" title="基于Hexo+Github Pages搭建一个属于自己的博客网站">基于Hexo+Github Pages搭建一个属于自己的博客网站</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-28T07:15:22.000Z" title="发表于 2020-11-28 15:15:22">2020-11-28</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Hexo/">Hexo</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%BB%BA%E7%AB%99/">建站</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/GitHub/">GitHub</a></span></div><div class="content">准备工作进入Github官网注册并登录：
+
+若你已经拥有GitHub账号，可跳过这一步。
+安装Node.jsNode.js为博客运行环境之一，搭建博客的主要操作在Node.js和Git的环境下完成。
+安装8.10以上版本的Node.js，推荐安装10.0及以上版本。
+你可前往Node.js官网进行安装：
+
+
+但此方法下载速度极慢，建议前往淘宝镜像站进行下载。
+安装Git下载安装Git：
+
+
+
+
+下载完成后按Win+R键，输入cmd打开命令行，并分别输入node -v和npm -v回车，出现版本号说明环境已经搭建完成：
+
+安装Hexo在任意空白处鼠标右键，单击Git Base Here，在Git控制台中输入以下代码：
+
+ps：Git控制台中，只有开头出现$符号时才能够输入命令，但此符号不可手动输入
+
+1npm install -g hexo-cli
+
+提示完成后，Hexo成功安装。安装后亦可通过使用hexo -v查看版本号，若出现版本号，说明Hexo安装完成！
+搭建博客新建一个文件夹，你的博客将保存于此文件夹。
+在此文件夹内再次打开Git Bash，输入以下命令：
+1hexo init
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/p/5a717bf0.html" title="更新日志">     <img class="post_bg" src="https://s3.ax1x.com/2020/11/28/DyrYNt.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="更新日志"></a></div><div class="recent-post-info"><a class="article-title" href="/p/5a717bf0.html" title="更新日志">更新日志</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-27T10:16:56.000Z" title="发表于 2020-11-27 18:16:56">2020-11-27</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%BB%BA%E7%AB%99/">建站</a></span></div><div class="content">1.5.8(2021/1016)
+
+更换网站favicon
+去除分类卡片
+
+
+1.5.7(2021/10/15)
+
+发布文章《Hexo常见问题及其解决方法》
+取消各界面头图
+
+
+1.5.6(2021/10/14)
+
+修改主视觉Banner图
+更改博客名为LAIHSIAO
+
+
+1.5.4(2021/10/14)
+
+LeanCloud评论数据恢复，Valine评论功能修复，已可使用
+优化导航栏
+
+
+1.5.2(2021/10/13)
+
+发布文章《简单往事 Part.1》
+更改代码块样式为Mac风格
+
+
+1.5.0(2021/10/13)
+
+新增Github日历Gitcalendar插件
+
+
+1.4.3(2021/10/12)
+
+网站主题颜色改为深邃的克莱因蓝这颜色简直帅死了
+更改主标题字体
+
+
+1.4.2(2021/10/12)
+
+出现未知bug，特征为打开网站后所有卡片变成透明状态，bug成因未知，暂未解决可通过以下方法解决问题：
+点击网页右下角齿轮状按钮，切换为暗黑模式后再次切换回来即可解决bug问题
+更新《基于Hexo+Github-Pages搭建一个属于自己的博客网站》，使之更加详 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/p/69d24ef3.html" title="Hexo建站小记">     <img class="post_bg" src="https://s3.ax1x.com/2020/11/26/D0Hwx1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo建站小记"></a></div><div class="recent-post-info"><a class="article-title" href="/p/69d24ef3.html" title="Hexo建站小记">Hexo建站小记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-27T08:24:49.000Z" title="发表于 2020-11-27 16:24:49">2020-11-27</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%9D%82%E8%B0%88/">杂谈</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%BB%BA%E7%AB%99/">建站</a></span></div><div class="content">前言哪个男孩不想拥有一个属于自己的网站呢？更何况一名软件工程专业的在读大学生！
+失败是成功之母早在半年前我就购入了linton.work的域名，但是由于相关知识的缺乏，一直闲置未用。
+直至今年11月份，在逛酷安时无意中看到了某个酷友的网站页脚写着“十年之约”的字样，好酷！我好像突然觉醒了什么了不起的中二之魂，下定决心要认真搭起来一个漂亮的个人博客。
+通过大量Google后，我决定通过网站模板+虚拟主机的方式搭建网站。在选定模板后，我在B站找到了一个名为残忆云的公益主机，我大为惊喜！
+一番操作下，我成功在linton.work下捣鼓出了下图效果：
+
+
+几乎只是改了个壳子。。。
+但对完全没有HTML知识的我，只有满满的成就感。
+正当我沾沾自喜时，问题出现了。
+我原本的目的是搭建个人博客，是想要写点东西的，但是这个网站模板是没有任何发布文章的入口的，因为这是一个摄影作品展示网站，而我又没有能力去大改网站的源代码。
+无奈之下，又将之闲置了。
+Hexo永远滴神！又是在一次闲逛酷安时，我看到了一个做的相当漂亮的博客网站，在评论区得知这是一个基于Hexo的博客主题Butterfly。
+在阅读了Hex ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/p/f114679d.html" title="应室友强烈要求，现张贴其照片一张">     <img class="post_bg" src="https://s3.ax1x.com/2020/11/26/DBdNKP.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="应室友强烈要求，现张贴其照片一张"></a></div><div class="recent-post-info"><a class="article-title" href="/p/f114679d.html" title="应室友强烈要求，现张贴其照片一张">应室友强烈要求，现张贴其照片一张</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-26T14:36:41.000Z" title="发表于 2020-11-26 22:36:41">2020-11-26</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%9D%82%E8%B0%88/">杂谈</a></span></div><div class="content">
+有兴趣找他🤺的请火速与我联系！！</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/p/4a17b156.html" title="Hello World">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/p/4a17b156.html" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-25T16:00:00.000Z" title="发表于 2020-11-26 00:00:00">2020-11-26</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Generate static files1$ hexo generate
+
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Laihsiao</div><div class="author-info__description">来萧的博客</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JayLinton"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/JayLinton" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://qm.qq.com/cgi-bin/qm/qr?k=G8ZD7Rx1q4dPzcoM32nst6hxDJaPhdM9&amp;noverify=0" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://weibo.com/3759294544/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">本站时隔近一年，秽土转生-v1.4.0</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/2511a216.html" title="Hexo常见问题及其解决方法"><img src="https://gitee.com/jilins/images/raw/master/blogs/hcw.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo常见问题及其解决方法"/></a><div class="content"><a class="title" href="/p/2511a216.html" title="Hexo常见问题及其解决方法">Hexo常见问题及其解决方法</a><time datetime="2021-10-15T04:25:10.000Z" title="发表于 2021-10-15 12:25:10">2021-10-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/e6c54609.html" title="简单往事 Part.1"><img src="https://z3.ax1x.com/2021/10/13/5K6FKS.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="简单往事 Part.1"/></a><div class="content"><a class="title" href="/p/e6c54609.html" title="简单往事 Part.1">简单往事 Part.1</a><time datetime="2021-10-13T07:44:55.000Z" title="发表于 2021-10-13 15:44:55">2021-10-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/9324a42d.html" title="马克思1844年经济学哲学手稿读后感"><img src="https://s3.ax1x.com/2020/12/02/D5G3jO.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="马克思1844年经济学哲学手稿读后感"/></a><div class="content"><a class="title" href="/p/9324a42d.html" title="马克思1844年经济学哲学手稿读后感">马克思1844年经济学哲学手稿读后感</a><time datetime="2020-12-01T11:47:43.000Z" title="发表于 2020-12-01 19:47:43">2020-12-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/b85c5344.html" title="基于Hexo+Github Pages搭建一个属于自己的博客网站"><img src="https://s3.ax1x.com/2020/11/28/DyypyF.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于Hexo+Github Pages搭建一个属于自己的博客网站"/></a><div class="content"><a class="title" href="/p/b85c5344.html" title="基于Hexo+Github Pages搭建一个属于自己的博客网站">基于Hexo+Github Pages搭建一个属于自己的博客网站</a><time datetime="2020-11-28T07:15:22.000Z" title="发表于 2020-11-28 15:15:22">2020-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/5a717bf0.html" title="更新日志"><img src="https://s3.ax1x.com/2020/11/28/DyrYNt.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="更新日志"/></a><div class="content"><a class="title" href="/p/5a717bf0.html" title="更新日志">更新日志</a><time datetime="2020-11-27T10:16:56.000Z" title="发表于 2020-11-27 18:16:56">2020-11-27</time></div></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/GitHub/" style="font-size: 1.1em; color: #999">GitHub</a> <a href="/tags/Hexo/" style="font-size: 1.23em; color: #999ea6">Hexo</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.23em; color: #999ea6">博客</a> <a href="/tags/%E5%93%B2%E5%AD%A6/" style="font-size: 1.1em; color: #999">哲学</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">学习</a> <a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 1.1em; color: #999">小说</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 1.37em; color: #99a4b2">建站</a> <a href="/tags/%E6%81%8B%E7%88%B1/" style="font-size: 1.1em; color: #999">恋爱</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.23em; color: #999ea6">教程</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 1.5em; color: #99a9bf">杂谈</a> <a href="/tags/%E7%BB%8F%E6%B5%8E/" style="font-size: 1.1em; color: #999">经济</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 1.1em; color: #999">记录</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">5</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">8</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2020-11-24T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">6.1k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-10-17T10:08:30.458Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Laihsiao</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20201123" target="_blank"> 20201123号</a></div><div class="icp"><a target="_blank" rel="noopener" href="https://travellings.now.sh/"><img class="icp-icon" src="https://s3.ax1x.com/2020/11/29/DgEbY6.jpg" alt="ICP"/><span></span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>function subtitleType () {
+  $.getJSON('https://v1.hitokoto.cn', function (data) {
+    if (true) {
+      var from = '出自 ' + data.from
+      var sub = "这里是姬林的个人博客,琴瑟在御，莫不静好".length == 0 ? new Array() : "这里是姬林的个人博客,琴瑟在御，莫不静好".split(',')
+      var both = sub.unshift(data.hitokoto, from)
+      var typed = new Typed('#subtitle', {
+        strings: sub,
+        startDelay: 300,
+        typeSpeed: 150,
+        loop: true,
+        backSpeed: 50,
+      })
+    } else {
+      document.getElementById('subtitle').innerHTML = data.hitokoto
+    }
+  })
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/js/background.js"></script><script src="/js/mobile.js"></script></div><!-- hexo injector body_end start --><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+                        function gitcalendar_injector_config(){
+                          var parent_div_git = document.getElementById('recent-posts');
+                          var item_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+                          parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+                          console.log('已挂载gitcalendar')
+                          }
+
+                        if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+                            gitcalendar_injector_config()
+                            GitCalendarInit("https://gitcalendar.akilar.top/api?JayLinton",['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'],'JayLinton')
+                        }
+                      </script><!-- hexo injector body_end end --></body></html>
